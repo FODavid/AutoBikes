@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>AutoBikes</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/main.js"></script>
+
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+ 
+ <link rel ="stylesheet" href="css/jquery.dataTables.css"/>
+<script src="js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+
+<h1>Welcome to AutoBikes Trader</h1>
+<h4>The Best AutoBikes in the Region </h4>
+
+<div id="bootstrap">
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home2"><i class="fa fa-home"></i> Home</a></li>
+  
+ <!-- -  <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-home"></i> Home</a></li> -->
+  <li><a data-toggle="tab" href="#product"><i class="fa fa-bars"></i> Products</a></li>
+  <li><a data-toggle="tab" href="#admin"><i class="fa fa-user-circle"></i> Admin</a></li>
+</ul>
+
+</div>
+
+
+
+
+<div class="tab-content">
+<div id ="home2" class = "tab-pane fade">
+
+<a href="#"> <img src = "https://www.cyclenews.com/wp-content/uploads/2017/03/Spread_VFR.jpg" alt = "homepageimage" ></a>
+
+
+</div>
+
+ <!--  <div id="home" class="tab-pane fade ">
+  		<div class="header">
+<h2>Welcome to the AutoBikes Application</h2>
+ <input type="text" id="searchKey"/>
+    <button id="btnSearch" >Search</button>
+    <button id="btnAdd">New Bike</button>
+    </div>
+    <br>
+
+<div class="leftArea">
+<ul id="bikeList"></ul>
+</div>
+
+<div class="mainArea">
+
+<label>Id:</label>
+<input id="bikeId" name="id" type="text" disabled />
+
+<label>Name:</label>
+<input type="text" id="name" name="name" />
+
+<label>Make:</label>
+<input type="text" id="make" name="make"/>
+
+<label>Model:</label>
+<input type="text" id="model" name="model"/>
+
+<label>Region:</label>
+<input type="text" id="region" name="region"/>
+
+<label>Colour:</label>
+<input type="text" id="colour" name="colour"/>
+
+<label>Year:</label>
+<input type="text" id="year" name="year"/>
+
+<label>Price:</label>
+<input type="text" id="price" name="price"/>
+
+<label>Country:</label>
+<input type="text" id="country" name="country"/>
+
+
+<button id="btnSave" type="button" >Save</button>
+<br>
+<br>
+<button id="btnDelete" name="Delete Button" >Delete</button>
+
+</div>
+
+
+
+<div class="rightArea">
+<img id="pic" height="300" >
+
+<label class="block">Specification:</label>
+<textarea id="specification" name="specification"></textarea>
+</div>
+  		
+  </div> -->
+
+  <div id="product" class="tab-pane fade">
+   <div class="header">
+		<h2>Products</h2>
+    </div>
+   
+<div class="container">
+<div class="row" id="product_grid">
+
+</div>
+</div>
+
+  </div>
+  
+  <div id="admin" class="tab-pane fade">
+   <div class="header">
+   <br>
+   <h3 style="float: left; margin:0px;">Admin</h3>
+   <button id="btnAdd" data-toggle="modal" data-target ="#myModal" style="float:right; margin:0px;"
+   class ="add-autobike btn btn-info btn-lg">New Auto</button>
+   <br><br>
+    </div>
+    <table id="table_id" class="display">
+<thead>
+<tr>
+<th style="width:100px">Name</th>
+<th>Make</th>
+<th>Model</th>
+<th>Year</th>
+<th>Price</th>
+<th>Colour</th>
+<th>Region</th>
+<th>Edit</th>
+<th>Remove</th>
+</tr>
+</thead>
+<tbody id ="table_body">
+
+</tbody>
+</table>
+    
+  </div>
+</div>
+
+<div id="myModal" class="modal fade" role = "dialog">
+<div  class="modal-dialog">
+
+<!-- Modal content -->
+<div class ="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">AutoBike Details</h4>
+</div>
+
+<div class="modal-body">
+<!--  <button id="btnAdd" onclick="onAddButtonClick()">New Auto</button>-->
+
+<div class="form group">
+<label>Id:</label>
+<input id="bikeId" class="form-control" name="id" type="text" disabled />
+</div>
+
+<div class="form-group">
+<label>Name:</label>
+<input type="text" id="name" class="form-control" name="Name" required/>
+</div>
+
+<div class="form-group">
+<label>Make</label>
+<input type="text" id="make" class="form-control" name="Make" required/>
+</div>
+
+<div class="form-group">
+<label>Model</label>
+<input type="text" id="model" class="form-control" name="Model" required/>
+</div>
+
+<div class="form-group">
+<label>Region</label>
+<input type="text" id="region" class="form-control" name="Region" required/>
+</div>
+
+<div class="form-group">
+<label>Colour</label>
+<input type="text" id="colour" class="form-control" name="Colour" required/>
+</div>
+
+<div class="form-group">
+<label>Year</label>
+<input type="text" id="year" class="form-control" name="Year" required/>
+</div>
+
+<div class="form-group">
+<label>Price</label>
+<input type="text" id="price" class="form-control" name="Price" required/>
+</div>
+
+<div class="form-group">
+<label>Country</label>
+<input type="text" id="country" class="form-control" name="Country" required/>
+</div>
+
+<div class="form-group">
+<label>Specification</label>
+<textarea  id="specification" name="Specification"></textarea>
+</div>
+
+<div class="form-group">
+<img id="pic" height="300">
+</div>
+
+<button id="btnSave">Save</button>
+<button id="btnDelete">Delete</button>
+
+</div>
+
+<div class ="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
