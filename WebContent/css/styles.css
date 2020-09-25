@@ -87,3 +87,16 @@ label.block {
 
 .prod_image{max-width:100%;margin-bottom:10px;max-height: 180px;}
 
+#headerdesign{
+	background-image: url('https://www.cyclenews.com/wp-content/uploads/2017/03/Spread_VFR.jpg');
+	color: white;
+	font-size: 100px;
+	padding: 50px 0px;
+	margin-bottom: 45px;
+	
+}
+
+.nav-tabs{
+	background-color: lightblue;
+}
+

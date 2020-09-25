@@ -6,31 +6,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Bike {
 
 	private int id;
-
 	private String name;
-
 	private String make;
-
 	private String model;
-
 	private String region;
-
 	private String colour;
-
 	private String year;
-
 	private int price;
-
 	private String country;
-
 	private String picture;
-
 	private String specification;
-	
 
 	public Bike() {
 
-		}
+	}
 
 	public int getId() {
 		return id;
